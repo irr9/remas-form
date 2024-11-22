@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Dear Remas</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: #fff;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .form-title {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin: 15px 0;
+    }
+
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    button {
+      background: #ff6b6b;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #ff4757;
+    }
+
+    #output {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #output img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 10px;
+    }
+
+    #output p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-title">A Special Message for You, Remas ❤️</div>
+    <div class="form-group">
+      <input type="text" id="name" placeholder="Enter Your Name" required>
+    </div>
+    <div class="form-group">
+      <input type="email" id="email" placeholder="Enter My Name" required>
+    </div>
+    <button onclick="showMessage()">Click Me</button>
+
+    <div id="output">
+      <img src="remas.jpg" alt="Remas's Picture"> <!-- Replace "remas.jpg" with her picture -->
+      <p id="message"></p>
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const output = document.getElementById('output');
+      const message = document.getElementById('message');
+
+      if (name === "" || email === "") {
+        alert("Please fill in all the fields!");
+        return;
+      }
+
+      output.style.display = "block";
+      message.textContent = ` My Beautiful Remas,I want you to know that you are the only one in my heart. I don't have any other girl, and I will never try to have anyone else except you. Please, never think of being with someone else except me because I love you with all my heart. Inshallah, when the time is right, I will marry you, and we will be together forever. 🥺🫶❤️`;
+    }
+  </script>
+</body>
+</html>
